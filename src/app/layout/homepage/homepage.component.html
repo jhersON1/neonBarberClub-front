@@ -1,0 +1,203 @@
+<!-- barbershop.component.html -->
+<div class="min-h-screen bg-white">
+  <!-- Navbar minimalista -->
+  <app-navbar></app-navbar>
+
+  <!-- Hero Video Section -->
+  <div class="relative w-full overflow-hidden" style="padding-top: 60%">
+    <!-- Video Container con aspect ratio 16:9 -->
+    <div class="absolute top-0 left-0 right-0 bottom-0">
+      <!-- Video Placeholder - Aquí iría el video de 5 segundos -->
+      <div class="w-full h-full bg-black">
+        <!-- Video background simulado con un div para el ejemplo -->
+        <div class="w-full h-full bg-gradient-to-r from-gray-900 to-black"></div>
+      </div>
+
+      <!-- Overlay Content -->
+      <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6">
+        <h2 class="text-3xl md:text-4xl lg:text-5xl font-light tracking-wider mb-4 md:mb-6 text-center">
+          THE FUTURE OF GROOMING
+        </h2>
+        <p class="text-base md:text-lg mb-6 md:mb-8 tracking-wide text-center">
+          AI-POWERED PRECISION • LUXURY EXPERIENCE
+        </p>
+        <button class="px-8 md:px-12 py-3 md:py-4 border border-white hover:bg-white hover:text-black transition-all">
+          DISCOVER MORE
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Grid - Más minimalista -->
+  <section class="py-24 px-6">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-light text-center mb-16 tracking-wider">SIGNATURE SERVICES</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="space-y-4 text-center">
+          <div class="aspect-square bg-gray-50"></div>
+          <h3 class="text-lg font-light">AI PRECISION CUT</h3>
+          <p class="text-sm text-gray-600">FROM $45</p>
+        </div>
+
+        <div class="space-y-4 text-center">
+          <div class="aspect-square bg-gray-50"></div>
+          <h3 class="text-lg font-light">BEARD SCULPTING</h3>
+          <p class="text-sm text-gray-600">FROM $35</p>
+        </div>
+
+        <div class="space-y-4 text-center">
+          <div class="aspect-square bg-gray-50"></div>
+          <h3 class="text-lg font-light">ROYAL SHAVE</h3>
+          <p class="text-sm text-gray-600">FROM $40</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Feature Section - Minimalista -->
+  <section class="py-24 px-6 bg-black text-white">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-3xl font-light mb-8 tracking-wider">AI STYLE INNOVATION</h2>
+          <div class="space-y-6 text-gray-300">
+            <p>Experience the perfect blend of artificial intelligence and expert craftsmanship. Our AI-powered systems
+              analyze your features to recommend the most flattering styles while our master barbers bring those
+              recommendations to life.</p>
+            <button class="px-8 py-3 border border-white hover:bg-white hover:text-black transition-all mt-8">
+              LEARN MORE
+            </button>
+          </div>
+        </div>
+        <div class="aspect-square bg-gray-900"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section - Simplificado -->
+  <section class="py-24 px-6">
+    <div class="container mx-auto max-w-2xl">
+      <h2 class="text-3xl font-light text-center mb-16 tracking-wider">BOOK AN APPOINTMENT</h2>
+
+      <form class="space-y-8">
+        <div class="grid md:grid-cols-2 gap-6">
+          <input type="text" placeholder="First Name"
+            class="p-3 border-b border-black/20 focus:border-black outline-none transition-all">
+          <input type="text" placeholder="Last Name"
+            class="p-3 border-b border-black/20 focus:border-black outline-none transition-all">
+        </div>
+
+        <input type="email" placeholder="Email Address"
+          class="w-full p-3 border-b border-black/20 focus:border-black outline-none transition-all">
+
+        <select class="w-full p-3 border-b border-black/20 focus:border-black outline-none transition-all">
+          <option>Select Service</option>
+          <option>AI Precision Cut - $45</option>
+          <option>Beard Sculpting - $35</option>
+          <option>Royal Shave - $40</option>
+        </select>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <input type="date" class="p-3 border-b border-black/20 focus:border-black outline-none transition-all">
+          <select class="p-3 border-b border-black/20 focus:border-black outline-none transition-all">
+            <option>Select Time</option>
+            <option>Morning</option>
+            <option>Afternoon</option>
+            <option>Evening</option>
+          </select>
+        </div>
+
+        <button class="w-full p-4 bg-black text-white hover:bg-gray-900 transition-all">
+          BOOK NOW
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Location Map Section -->
+  <section class="py-24 px-6 bg-gray-50">
+    <div class="container mx-auto max-w-6xl">
+      <h2 class="text-3xl font-light text-center mb-16 tracking-wider">VISIT US</h2>
+
+      <div class="grid md:grid-cols-5 gap-12">
+        <!-- Location Info -->
+        <div class="md:col-span-2 space-y-8">
+          <div class="space-y-4">
+            <h3 class="text-xl font-light">LUXURY·AI BARBERSHOP</h3>
+            <p class="text-gray-600">Experience the future of grooming at our flagship location.</p>
+          </div>
+
+          <div class="space-y-6">
+            <div class="space-y-2">
+              <p class="font-medium">Address</p>
+              <p class="text-gray-600">123 Innovation Avenue</p>
+              <p class="text-gray-600">TechCity, TC 10001</p>
+            </div>
+
+            <div class="space-y-2">
+              <p class="font-medium">Hours</p>
+              <p class="text-gray-600">Monday - Saturday: 9AM - 8PM</p>
+              <p class="text-gray-600">Sunday: 10AM - 6PM</p>
+            </div>
+
+            <button class="px-8 py-3 bg-black text-white hover:bg-gray-900 transition-all">
+              GET DIRECTIONS
+            </button>
+          </div>
+        </div>
+
+        <!-- Map -->
+        <div class="md:col-span-3 aspect-video bg-white rounded-lg shadow-sm overflow-hidden">
+          <!-- Aquí iría el componente del mapa real -->
+          <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+            <p class="text-gray-500">Interactive Map</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer - Minimalista -->
+  <footer class="py-16 px-6 bg-white border-t border-black/5">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid md:grid-cols-4 gap-12">
+        <div>
+          <h3 class="text-sm font-medium mb-4">ABOUT</h3>
+          <p class="text-sm text-gray-600">The future of grooming, powered by artificial intelligence.</p>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium mb-4">SERVICES</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>AI Precision Cut</li>
+            <li>Beard Sculpting</li>
+            <li>Royal Shave</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium mb-4">CONTACT</h3>
+          <ul class="space-y-2 text-sm text-gray-600">
+            <li>infoluxuryai.salon</li>
+            <li>+1 (555) 123-4567</li>
+            <li>123 Innovation Ave</li>
+          </ul>
+        </div>
+
+        <div>
+          <h3 class="text-sm font-medium mb-4">FOLLOW</h3>
+          <div class="flex gap-4">
+            <a href="#" class="text-gray-600 hover:text-black">IG</a>
+            <a href="#" class="text-gray-600 hover:text-black">FB</a>
+            <a href="#" class="text-gray-600 hover:text-black">TW</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-8 border-t border-black/5 text-center text-sm text-gray-600">
+        <p>© 2025 LUXURY·AI Barbershop. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</div>
