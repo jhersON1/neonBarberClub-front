@@ -1,13 +1,20 @@
-<nav class="w-full py-4 bg-white fixed top-0 z-50 border-b border-black/5">
-    <!-- Mobile Header -->
+
+<nav class="w-full py-4 md:py-6 bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-black/10 shadow-sm">
+    <!-- Mobile Header (hasta 767px) -->
     <div class="flex items-center justify-between px-4 md:hidden">
-        <button (click)="isMenuOpen = !isMenuOpen" class="text-gray-800">
+        <button (click)="isMenuOpen = !isMenuOpen" class="text-gray-800 hover:text-black transition-colors z-50">
+            @if (!isMenuOpen) {
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-16 6h16" />
             </svg>
+            } @else {
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            }
         </button>
-        <h1 class="text-xl font-light tracking-widest">LUXURY·AI</h1>
-        <button class="text-gray-800">
+        <h1 class="text-lg md:text-xl font-light tracking-[0.1em] font-['Times_New_Roman']">NEON·BARBER</h1>
+        <button class="text-gray-800 hover:text-black transition-colors">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                     d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -15,29 +22,35 @@
         </button>
     </div>
 
-    <!-- Desktop Menu -->
-    <div class="hidden md:flex justify-between items-center px-8">
-        <div class="flex items-center gap-8">
-            <a routerLink="/shop" class="text-gray-800 hover:text-black">SHOP</a>
-            <a routerLink="/explore" class="text-gray-800 hover:text-black">EXPLORE</a>
+    <!-- Desktop/Tablet Menu (768px en adelante) -->
+    <div class="hidden md:flex justify-between items-center px-6 lg:px-12">
+        <div class="flex items-center gap-6 lg:gap-12">
+            <a routerLink="/shop"
+                class="text-gray-800 hover:text-black transition-colors text-xs lg:text-sm tracking-wider">SHOP</a>
+            <a routerLink="/explore"
+                class="text-gray-800 hover:text-black transition-colors text-xs lg:text-sm tracking-wider">EXPLORE</a>
         </div>
 
         <div class="absolute left-1/2 -translate-x-1/2">
-            <a routerLink="/" class="text-2xl font-light tracking-widest whitespace-nowrap">
-                LUXURY·AI
+            <a routerLink="/" 
+               class="text-xl md:text-xl lg:text-2xl font-light tracking-[0.2em] whitespace-nowrap font-['Times_New_Roman']">
+                NEON·BARBER
             </a>
         </div>
 
-        <div class="flex items-center gap-8">
-            <a routerLink="/book" class="text-gray-800 hover:text-black">BOOK NOW</a>
-            <button class="text-gray-800 hover:text-black">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="flex items-center gap-6 lg:gap-12">
+            <a routerLink="/book" 
+               class="text-gray-800 hover:text-black transition-colors text-xs lg:text-sm tracking-wider">
+                BOOK NOW
+            </a>
+            <button class="text-gray-800 hover:text-black transition-colors">
+                <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                         d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
             </button>
-            <button class="text-gray-800 hover:text-black">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button class="text-gray-800 hover:text-black transition-colors">
+                <svg class="w-4 h-4 lg:w-5 lg:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
                         d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                 </svg>
@@ -45,15 +58,35 @@
         </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu Dropdown -->
     @if (isMenuOpen) {
-    <div class="fixed inset-0 bg-white z-50 pt-20 px-6 md:hidden">
-        <div class="flex flex-col gap-6 text-center">
-            <a routerLink="/shop" class="text-gray-800 hover:text-black py-2">SHOP</a>
-            <a routerLink="/explore" class="text-gray-800 hover:text-black py-2">EXPLORE</a>
-            <a routerLink="/book" class="text-gray-800 hover:text-black py-2">BOOK NOW</a>
+    <div class="absolute top-full left-0 w-full bg-white/95 backdrop-blur-sm shadow-lg transform transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col py-4 border-t border-gray-100">
+            <a routerLink="/shop"
+                class="px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors tracking-wider flex items-center justify-between text-sm"
+                (click)="isMenuOpen = false">
+                SHOP
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+            <a routerLink="/explore"
+                class="px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors tracking-wider flex items-center justify-between text-sm"
+                (click)="isMenuOpen = false">
+                EXPLORE
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
+            <a routerLink="/book"
+                class="px-4 py-3 text-gray-800 hover:bg-gray-50 transition-colors tracking-wider flex items-center justify-between text-sm"
+                (click)="isMenuOpen = false">
+                BOOK NOW
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7" />
+                </svg>
+            </a>
         </div>
     </div>
     }
-
 </nav>

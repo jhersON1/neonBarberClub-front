@@ -29,8 +29,5 @@ export class HeroVideoComponent implements AfterViewInit{
           });
       }
   }
-// function isPlatformBrowser(platformId: Object) {
-//   throw new Error('Function not implemented.');
-// }
-}
 
+}
