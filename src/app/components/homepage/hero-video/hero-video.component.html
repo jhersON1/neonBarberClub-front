@@ -1,41 +1,38 @@
-<section class="relative w-full h-screen">
-    <!-- Video Container Mobile -->
-    <div class="relative w-full h-full md:hidden">
-        <div class="absolute inset-0 bg-black">
-            <!-- Aquí irá el video móvil -->
-            <div class="w-full h-full bg-gradient-to-r from-gray-900 to-black"></div>
+<section class="block my-0">
+    <div class="hero-alternate__media">
+        <div class="md:hidden">
+            <video #mobileVideo playsinline autoplay loop muted class="object-cover w-full">
+                <source src="/barber-hero.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="hidden md:block">
+            <video #desktopVideo playsinline autoplay loop muted class="object-cover w-full">
+                <source src="/baber-hero.mp4" type="video/mp4">
+            </video>
         </div>
     </div>
 
-    <!-- Video Container Desktop -->
-    <div class="relative w-full h-full hidden md:block">
-        <div class="absolute inset-0 bg-black">
-            <!-- Aquí irá el video desktop -->
-            <div class="w-full h-full bg-gradient-to-r from-gray-900 to-black"></div>
-        </div>
-    </div>
-
-    <!-- Content Overlay -->
-    <div class="absolute inset-0 flex items-end md:items-center px-4 py-16 md:p-16 lg:p-24">
-        <div class="w-full md:w-1/2 lg:w-2/5">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl text-white font-light tracking-wider mb-4">
-                FLAWLESS SKIN, <br />ALL DAY IMPECCABLE
+    <div
+        class="flex absolute w-full h-full top-0 left-0 p-4 md:px-8 md:py-12 text-left justify-start items-end md:justify-start md:items-start">
+        <div class="inline-flex flex-col md:w-1/2 2xl:w-1/3">
+            <h1 class="text-[#fbfbfb] text-3xl md:text-4xl lg:text-5xl font-light tracking-wider">
+                FLAWLESS SKIN, <br>ALL DAY IMPECCABLE
             </h1>
 
-            <p class="text-white/90 text-base md:text-lg mb-8">
-                Beautiful blurred skin with a soft and natural feel. Our new liquid matte foundation and setting spray
-                are simply Impeccable.
-            </p>
+            <div class="font-sans mt-6 md:mt-8 text-[#fbfbfb]">
+                <p>Beautiful blurred skin with a soft and natural feel. Our new liquid matte foundation and setting
+                    spray are simply Impeccable.</p>
+            </div>
 
-            <div class="flex flex-wrap gap-4">
-                <a routerLink="/shop" class="px-8 py-3 bg-white text-black hover:bg-white/90 transition-colors">
-                    SHOP NOW
+            <div class="mt-6 md:mt-12 flex gap-3 flex-wrap items-start">
+                <a routerLink="/shop" class="px-6 py-3 bg-white text-black hover:bg-white/90">
+                    SHOP
                 </a>
-                <a routerLink="/learn"
-                    class="px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition-colors">
+                <a routerLink="/learn" class="px-6 py-3 border border-white text-white hover:bg-white hover:text-black">
                     LEARN MORE
                 </a>
             </div>
         </div>
+
     </div>
 </section>
