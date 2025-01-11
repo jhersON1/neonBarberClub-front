@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './location.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'container mx-auto max-w-6xl'
+    class: 'w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8'
   }
 })
 export class LocationComponent {
