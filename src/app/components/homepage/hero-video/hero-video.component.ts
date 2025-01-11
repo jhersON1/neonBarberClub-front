@@ -9,7 +9,7 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrl: './hero-video.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: 'relative w-full h-[calc(100vh-80px)] sm:h-[calc(100vh-96px)] md:h-[calc(100vh-112px)]'
+    class: 'relative block w-full h-full'
   }
 })
 export class HeroVideoComponent implements AfterViewInit{

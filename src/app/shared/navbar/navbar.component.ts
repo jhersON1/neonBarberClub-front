@@ -8,7 +8,7 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrl: './navbar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-    class: "w-full py-3 sm:py-4 md:py-6 bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-black/10 shadow-sm" 
+    class: "w-full py-1.5 sm:py-2 md:py-3 bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-black/10 shadow-sm" 
   }
 })
 export class NavbarComponent implements OnInit{
