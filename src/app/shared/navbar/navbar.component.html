@@ -1,6 +1,6 @@
 
-<nav class="w-full py-4 md:py-6 bg-white/95 backdrop-blur-sm fixed top-0 z-50 border-b border-black/10 shadow-sm">
-    <!-- Mobile Header (hasta 767px) -->
+<nav>
+    <!-- Mobile Header -->
     <div class="flex items-center justify-between px-4 md:hidden">
         <button (click)="isMenuOpen = !isMenuOpen" class="text-gray-800 hover:text-black transition-colors z-50">
             @if (!isMenuOpen) {
@@ -22,7 +22,7 @@
         </button>
     </div>
 
-    <!-- Desktop/Tablet Menu (768px en adelante) -->
+    <!-- Desktop/Tablet Menu -->
     <div class="hidden md:flex justify-between items-center px-6 lg:px-12">
         <div class="flex items-center gap-6 lg:gap-12">
             <a routerLink="/shop"
