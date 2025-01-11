@@ -7,7 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrl: './booking.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
-     class: "py-24 px-6"
+     class: "container mx-auto max-w-2xl"
   }
 })
 export class BookingComponent {

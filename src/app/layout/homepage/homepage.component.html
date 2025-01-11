@@ -4,8 +4,10 @@
   <app-navbar></app-navbar>
 
   <!-- Hero Video Section -->
-  <app-hero-video></app-hero-video>
-  
+  <section class="block my-0"> 
+    <app-hero-video></app-hero-video>
+  </section>
+
   <!-- Services Grid - Más minimalista -->
   <section class="py-24 px-6">
     <div class="container mx-auto max-w-6xl">
@@ -54,49 +56,15 @@
   </section>
 
   <!-- Booking Section - Simplificado -->
-  <app-booking></app-booking>
+  <section class="py-24 px-6">
+    <app-booking></app-booking>
+  </section>
+  
 
   <!-- Location Map Section -->
+
   <section class="py-24 px-6 bg-gray-50">
-    <div class="container mx-auto max-w-6xl">
-      <h2 class="text-3xl font-light text-center mb-16 tracking-wider">VISIT US</h2>
-
-      <div class="grid md:grid-cols-5 gap-12">
-        <!-- Location Info -->
-        <div class="md:col-span-2 space-y-8">
-          <div class="space-y-4">
-            <h3 class="text-xl font-light">LUXURY·AI BARBERSHOP</h3>
-            <p class="text-gray-600">Experience the future of grooming at our flagship location.</p>
-          </div>
-
-          <div class="space-y-6">
-            <div class="space-y-2">
-              <p class="font-medium">Address</p>
-              <p class="text-gray-600">123 Innovation Avenue</p>
-              <p class="text-gray-600">TechCity, TC 10001</p>
-            </div>
-
-            <div class="space-y-2">
-              <p class="font-medium">Hours</p>
-              <p class="text-gray-600">Monday - Saturday: 9AM - 8PM</p>
-              <p class="text-gray-600">Sunday: 10AM - 6PM</p>
-            </div>
-
-            <button class="px-8 py-3 bg-black text-white hover:bg-gray-900 transition-all">
-              GET DIRECTIONS
-            </button>
-          </div>
-        </div>
-
-        <!-- Map -->
-        <div class="md:col-span-3 aspect-video bg-white rounded-lg shadow-sm overflow-hidden">
-          <!-- Aquí iría el componente del mapa real -->
-          <div class="w-full h-full bg-gray-100 flex items-center justify-center">
-            <p class="text-gray-500">Interactive Map</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <app-location></app-location>
   </section>
 
   <!-- Footer - Minimalista -->

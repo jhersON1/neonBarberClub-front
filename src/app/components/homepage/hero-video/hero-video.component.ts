@@ -8,9 +8,6 @@ import { isPlatformBrowser } from '@angular/common';
   templateUrl: './hero-video.component.html',
   styleUrl: './hero-video.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: "block my-0"
-  }
 })
 export class HeroVideoComponent implements AfterViewInit{
   @ViewChild('mobileVideo') mobileVideo!: ElementRef<HTMLVideoElement>;
