@@ -18,6 +18,6 @@ import { FooterComponent } from '@app/shared/footer/footer.component';
   styleUrl: './homepage.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class HomepageComponent {
+export default class HomepageComponent {
 
 }

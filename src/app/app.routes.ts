@@ -8,11 +8,12 @@ export const routes: Routes = [
     },
     {
         path: '**',
-        redirectTo: 'home',
-        pathMatch: 'full'
+        redirectTo: () => {
+            return 'home';
+        }
     },
     {
         path: 'home',
-        loadComponent: () => import('./layout/homepage/homepage.component').then(m => m.HomepageComponent)
+        loadComponent: () => import('./layout/homepage/homepage.component'),
     }
 ];
