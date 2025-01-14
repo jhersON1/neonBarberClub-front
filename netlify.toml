@@ -2,3 +2,6 @@
 command = "ng build"
 functions = "netlify/functions"
 publish = "dist/neon-barber-club/browser"
+
+[[plugins]]
+  package = "@netlify/angular-runtime"
